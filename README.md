@@ -1,4 +1,5 @@
 # ROC SilentSent1nel – Netwerk Infrastructuur lab
+- Versie: V2
 
 ## Over het project
 
@@ -12,9 +13,9 @@ De volledige omgeving wordt gevirtualiseerd met VMware Workstation en richt zich
 
 De omgeving bestaat uit de volgende locaties:
 
-- Site A – Hoofdcampus (centrale IT en beheer)
+- Site A – Hoofdcampus (centrale IT, beheer en studentenomgeving)
 - Site B – Campus 2 (studentenomgeving)
-- Site C – Campus 3 (technische labs)
+- Site C – Campus 3 (technische labs en studentenomgeving)
 - ISP – Onbetrouwbaar internet (simulatie)
 
 De locaties zijn met elkaar verbonden via een WAN-structuur met beveiligde VPN-verbindingen.
@@ -23,8 +24,11 @@ De locaties zijn met elkaar verbonden via een WAN-structuur met beveiligde VPN-v
 
 ## Gebruikte technologieën
 
-- VyOS (routing, VPN en firewallfunctionaliteit)
-- Debian Minimal (DHCP, DNS en webserver)
+- 3x VyOS (routing, VPN en firewallfunctionaliteit)
+- 1x VyOS (Untrusted internet)
+- Debian Minimal DHCP-Server 
+- Debian Minimal DNS-Server 
+- Debian Minimal Webserver
 - OSPF (dynamisch routingprotocol)
 - Site-to-Site VPN
 - VMware Workstation
