@@ -13,4 +13,6 @@
 
 18-6-2026:
 
-- Interfaces op router Site-A geconfigureerd 
+- SSH service geactiveerd op router Site-A
+- Banners geconfigureerd op router Site-A
+- Interfaces op router Site-A geconfigureerd
