@@ -9,3 +9,8 @@
 - ipv4 plan opgesteld en gepushed naar de repo
 - Router Site A image geïnstalleerd
 - Netwerktekening V1 gemaakt en gepushed naar de repo
+
+
+18-6-2026:
+
+- Interfaces op router Site-A geconfigureerd 
