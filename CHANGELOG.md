@@ -16,7 +16,6 @@
 - SSH service geactiveerd op router Site-A
 - Banners geconfigureerd op router Site-A
 - Interfaces op router Site-A geconfigureerd
-
 - SSH service geactiveerd op router Site-B
 - Router Site B image geïnstalleerd
 - Banners geconfigureerd op router Site-B
