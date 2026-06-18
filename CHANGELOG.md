@@ -45,3 +45,4 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Netwerk/
 
 - ipv4 plan verplaatst naar Github directory "Netwerk"
 - OSPF routingprotocol op routers Site-A, Site-B en Site-C geconfigureerd
+- NAT Overload (PAT) op Site-A geconfigureerd d.m.v. 2x source rule's
