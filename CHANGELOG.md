@@ -44,4 +44,4 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/documentatie/c
 - Netwerktekening V1.png gepushed naar:
 https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Netwerk/
 
-- ipv4 plan verplaatst naar Github directory "Netwerk"
+- ipv4 plan verplaatst naar Github directory "Netwerk" 
