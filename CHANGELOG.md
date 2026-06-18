@@ -34,3 +34,14 @@
 - SSH service geactiveerd op untrusted router
 - Banners geconfigureerd op untrusted router
 - Interfaces op untrusted router geconfigureerd
+
+- Github directory "documentatie" aangemaakt
+casus.md verwijderd en opnieuw aangemaakt in:
+https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/documentatie/casus.md
+
+- Github directory "Netwerk" aangemaakt
+- Netwerktekening V1.png verwijderd van de Github hoofd directory
+- Netwerktekening V1.png gepushed naar:
+https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Netwerk/
+
+- ipv4 plan verplaatst naar Github directory "Netwerk"
