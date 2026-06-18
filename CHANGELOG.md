@@ -7,16 +7,24 @@
 - "Systemen ROC SilentSent1nel.docx" en "casus ROC SilentSent1nel.docx" verwijderd en vervangen met:
 -- README.md en casus.md
 - ipv4 plan opgesteld en gepushed naar de repo
+
+#### Site A:
 - Router Site A image geïnstalleerd
 - Netwerktekening V1 gemaakt en gepushed naar de repo
 
-
 18-6-2026:
 
+#### Site B:
+- Router Site B image geïnstalleerd
 - SSH service geactiveerd op router Site-A
 - Banners geconfigureerd op router Site-A
 - Interfaces op router Site-A geconfigureerd
 - SSH service geactiveerd op router Site-B
-- Router Site B image geïnstalleerd
 - Banners geconfigureerd op router Site-B
 - Interfaces op router Site-B geconfigureerd
+
+#### Site C:
+- Router Site C image geïnstalleerd
+- SSH service geactiveerd op router Site-C
+- Banners geconfigureerd op router Site-C
+- Interfaces op router Site-C geconfigureerd
