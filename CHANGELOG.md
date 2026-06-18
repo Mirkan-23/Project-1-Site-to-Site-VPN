@@ -28,3 +28,9 @@
 - SSH service geactiveerd op router Site-C
 - Banners geconfigureerd op router Site-C
 - Interfaces op router Site-C geconfigureerd
+
+#### Untrusted internet router:
+- Untrusted router image geïnstalleerd
+- SSH service geactiveerd op untrusted router
+- Banners geconfigureerd op untrusted router
+- Interfaces op untrusted router geconfigureerd
