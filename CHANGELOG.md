@@ -34,7 +34,6 @@
 - SSH service geactiveerd op untrusted router
 - Banners geconfigureerd op untrusted router
 - Interfaces op untrusted router geconfigureerd
-
 - Github directory "documentatie" aangemaakt
 casus.md verwijderd en opnieuw aangemaakt in:
 https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/documentatie/casus.md
@@ -45,5 +44,4 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/documentatie/c
 https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Netwerk/
 
 - ipv4 plan verplaatst naar Github directory "Netwerk"
-
 - OSPF routingprotocol op routers Site-A, Site-B en Site-C geconfigureerd
