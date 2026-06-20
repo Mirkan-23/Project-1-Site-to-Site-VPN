@@ -46,3 +46,13 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Netwerk/
 - ipv4 plan verplaatst naar Github directory "Netwerk"
 - OSPF routingprotocol op routers Site-A, Site-B en Site-C geconfigureerd
 - NAT Overload (PAT) op Site-A geconfigureerd d.m.v. 2x source rule's
+
+19-6-2026 en 20-6-2026:
+
+#### Site-A:
+- Rule 10 verwijderd
+- VPN Configuratie toegevoegd op Site-A
+- VPN-Config_Site-A.conf toegevoegd aan repo directory: https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Config/Routers
+- OSPF werking aangepast
+- Rule 10 (Zoals op Site-A stond) toegevoegd aan Site-B router
+- Rule 10 (Zoals op Site-A stond) toegevoegd aan Site-C router
