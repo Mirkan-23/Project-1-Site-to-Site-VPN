@@ -56,3 +56,14 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Netwerk/
 - OSPF werking aangepast op Site-A
 - Rule 10 (Zoals op Site-A stond) toegevoegd aan Site-B router
 - Rule 10 (Zoals op Site-A stond) toegevoegd aan Site-C router
+
+21-6-2026:
+
+- Rule 10 verwijderd van Site-B en Site-C router
+- VPN Configuratie toegevoegd op Site-B
+- VPN Configuratie toegevoegd op Site-B
+
+================ STATUS ================
+Site-A: ipsec sa is UP in beide tunnels
+Site-B: ipsec sa is UP in beide tunnels
+Site-C: ipsec sa is UP in beide tunnels
