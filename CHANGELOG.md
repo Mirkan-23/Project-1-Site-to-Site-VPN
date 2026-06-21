@@ -63,11 +63,20 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Netwerk/
 - VPN Configuratie toegevoegd op Site-B
 - VPN Configuratie toegevoegd op Site-B
 
-================ STATUS ================
-Site-A: ipsec sa is UP in beide tunnels
-Site-B: ipsec sa is UP in beide tunnels
-Site-C: ipsec sa is UP in beide tunnels
-================ STATUS ================
+STATUS VPN:
+Site-A: ipsec sa is UP richting Site-B en Site-C
+Site-B: ipsec sa is UP richting Site-A en Site-C
+Site-C: ipsec sa is UP richting Site-A en Site-B
 
 - VPN-Config_Site-A.conf, VPN-Config_Site-B.conf en VPN-Config_Site-C.conf verplaatst naar:
 https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Config/Routers/VPN%20Configs
+
+22-6-2026:
+
+- Debian 13 minimal instance geïnstalleerd om DHCP services aan te bieden d.m.v. KEA.
+-- ROC-DHCP
+- DHCP Server geconfigureerd
+- DHCP Relay geconfigureerd op Site-A, Site-B en Site-C
+- 2 VM's ter netwerk test doeleinden gedeployed in de omgeving:
+-- PuppyLinux-Test-VM-1
+-- W10-Test-VM-2
