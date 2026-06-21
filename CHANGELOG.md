@@ -67,3 +67,8 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Netwerk/
 Site-A: ipsec sa is UP in beide tunnels
 Site-B: ipsec sa is UP in beide tunnels
 Site-C: ipsec sa is UP in beide tunnels
+================ STATUS ================
+
+- VPN-Config_Site-A.conf, VPN-Config_Site-B.conf en VPN-Config_Site-C.conf verplaatst naar:
+https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Config/Routers/VPN%20Configs
+
