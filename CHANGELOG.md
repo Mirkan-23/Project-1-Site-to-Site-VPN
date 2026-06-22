@@ -80,3 +80,8 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Config/Routers
 - 2 VM's ter netwerk test doeleinden gedeployed in de omgeving:
 -- PuppyLinux-Test-VM-1
 -- W10-Test-VM-2
+
+- Debian 13 minimal instance geïnstalleerd om DNS services aan te bieden d.m.v. Unbound.
+-- ROC-DNS
+
+- Poging tot DHCP-Relay issue's debuggen (Deels DHCP Relay kunnen fixen)
