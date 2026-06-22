@@ -50,12 +50,12 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Netwerk/
 19-6-2026 en 20-6-2026:
 
 #### Site-A:
-- Rule 10 verwijderd
-- VPN Configuratie toegevoegd op Site-A
-- VPN-Config_Site-A.conf toegevoegd aan repo directory: https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Config/Routers
-- OSPF werking aangepast op Site-A
-- Rule 10 (Zoals op Site-A stond) toegevoegd aan Site-B router
-- Rule 10 (Zoals op Site-A stond) toegevoegd aan Site-C router
+    - Rule 10 verwijderd
+    - VPN Configuratie toegevoegd op Site-A
+    - VPN-Config_Site-A.conf toegevoegd aan repo directory: https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Config/Routers
+    - OSPF werking aangepast op Site-A
+    - Rule 10 (Zoals op Site-A stond) toegevoegd aan Site-B router
+    - Rule 10 (Zoals op Site-A stond) toegevoegd aan Site-C router
 
 21-6-2026:
 
