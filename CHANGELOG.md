@@ -94,3 +94,14 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Config/Routers
 - Debian 13 minimal instance geïnstalleerd om HTTP services aan te bieden d.m.v. Nginx.
 -- ROC-WEB
 - index.html aangemaakt, deze is via Gemini geproduceerd.
+- Screenfetch toegevoegd zodra je via SSH binnenkomt op de DNS, DHCP of Webserver. Te zien:
+-- username & hostname
+-- OS
+-- Kernel
+-- Uptime
+-- Pakketten
+-- Shell
+-- Schijfruimte
+-- CPU
+-- GPU
+-- RAM
