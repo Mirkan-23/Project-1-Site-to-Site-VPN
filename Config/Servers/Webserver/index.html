@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welkom bij ROC SilentSentinel</title>
+    <style>
+        :root {
+            /* Kleurenpalet */
+            --primary-blue: #1e3a8a;
+            --dark-blue: #0f172a;
+            --accent-gold: #f59e0b;
+            --accent-gold-hover: #d97706;
+            --bg-light: #f8fafc;
+
+            /* Zwarte Tekstkleuren voor maximaal contrast */
+            --text-main: #000000;
+            --text-muted: #1a1a1a;
+            --border-color: #cbd5e1;
+
+            /* Vrolijke accentkleuren voor de kaarten */
+            --color-blue: #3b82f6;
+            --color-orange: #f97316;
+            --color-pink: #ec4899;
+            --color-green: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Hoofdnavigatie --- */
+        header {
+            background-color: white;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--color-blue);
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-left: 2.5rem;
+            transition: color 0.2s;
+            padding-bottom: 4px;
+        }
+
+        .main-nav a:hover {
+            color: var(--color-blue);
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        /* --- Hero Sectie --- */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a, #312e81, #581c87);
+            color: white;
+            padding: 6rem 5% 10rem 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #f1f5f9;
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        /* --- Quick Access Balk --- */
+        .quick-access-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+            transform: translateY(-50%);
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-access-bar {
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .quick-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: background-color 0.2s;
+            border-right: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .quick-item:last-child {
+            border-right: none;
+        }
+
+        .quick-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        .item-eduarte:hover::before { background: var(--color-blue); }
+        .item-roosters:hover::before { background: var(--color-orange); }
+        .item-mail:hover::before { background: var(--color-pink); }
+        .item-cloud:hover::before { background: var(--color-green); }
+
+        .quick-item:hover {
+            background-color: #f8fafc;
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .quick-item:hover .icon-circle {
+            transform: scale(1.1);
+        }
+
+        .item-eduarte .icon-circle { background-color: #eff6ff; color: var(--color-blue); }
+        .item-roosters .icon-circle { background-color: #fff7ed; color: var(--color-orange); }
+        .item-mail .icon-circle { background-color: #fdf2f8; color: var(--color-pink); }
+        .item-cloud .icon-circle { background-color: #ecfdf5; color: var(--color-green); }
+
+        .quick-item span {
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        /* --- Content Area --- */
+        .content-section {
+            max-width: 1200px;
+            margin: -2rem auto 4rem auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        @media (max-width: 900px) {
+            .content-section { grid-template-columns: 1fr; }
+            .quick-access-bar { flex-wrap: wrap; }
+            .quick-item { min-width: 50%; border-bottom: 1px solid var(--border-color); }
+        }
+
+        .section-header {
+            font-size: 1.8rem;
+            color: var(--text-main);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .view-all {
+            font-size: 1rem;
+            color: var(--color-blue);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-top: 4px solid var(--color-blue);
+        }
+
+        .news-card.orange-border { border-top-color: var(--color-orange); }
+
+        .news-tag {
+            color: var(--color-blue);
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .news-card.orange-border .news-tag { color: var(--color-orange); }
+
+        .news-card h3 {
+            color: var(--text-main);
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .news-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .agenda-list {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            padding: 0 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .agenda-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .agenda-item:last-child {
+            border-bottom: none;
+        }
+
+        .agenda-date {
+            background: var(--color-blue);
+            color: white;
+            min-width: 65px;
+            height: 65px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            line-height: 1.1;
+            box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+        }
+
+        .agenda-date span { font-size: 1.4rem; }
+        .agenda-date small { font-size: 0.8rem; text-transform: uppercase; }
+
+        .agenda-info h4 {
+            color: var(--text-main);
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 0.4rem;
+        }
+
+        .agenda-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* --- Volledig Vernieuwde, Heldere Footer --- */
+        footer {
+            background-color: #ffffff;
+            color: var(--text-main);
+            padding: 4rem 5% 0 5%;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            color: var(--text-main);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-blue);
+            text-decoration: underline;
+        }
+
+        /* Utility balk Helemaal onderaan - Met Fallback Margins voor oude browsers */
+        .footer-bottom {
+            background-color: #f1f5f9;
+            padding: 1.5rem 5%;
+            margin: 0 -5%;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+
+        .footer-bottom-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-utility-links {
+            display: block;
+        }
+
+        /* DIT lost het plakken van de links op! */
+        .footer-utility-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 1.5rem;
+            display: inline-block;
+        }
+
+        .footer-utility-links a:hover {
+            color: var(--color-blue);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            <h1>ROC <span>SilentSentinel</span></h1>
+        </a>
+        <nav class="main-nav">
+            <a href="#">Home</a>
+            <a href="#">Opleidingen</a>
+            <a href="#">Voor Studenten</a>
+            <a href="#">Over Ons</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Klaar voor de toekomst in IT.</h2>
+        <p>Praktijkgericht onderwijs, moderne faciliteiten en een ijzersterke focus op netwerkinfrastructuur en cybersecurity.</p>
+        <a href="#" class="btn-primary">Ontdek onze opleidingen</a>
+    </div>
+
+    <div class="quick-access-wrapper">
+        <div class="quick-access-bar">
+
+            <a href="#" class="quick-item item-eduarte">
+                <div class="icon-circle">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                </div>
+                <span>EduArte</span>
+            </a>
+
+            <a href="#" class="quick-item item-roosters">
+                <div class="icon-circle">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+                <span>Roosters</span>
+            </a>
+
+            <a href="#" class="quick-item item-mail">
+                <div class="icon-circle">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <span>School Mail</span>
+            </a>
+
+            <a href="#" class="quick-item item-cloud">
+                <div class="icon-circle">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                </div>
+                <span>Cloud Drive</span>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="content-section">
+
+        <div>
+            <div class="section-header">
+                <h3>Actueel Nieuws</h3>
+                <a href="#" class="view-all">Bekijk alles &rarr;</a>
+            </div>
+
+            <div class="news-grid">
+                <div class="news-card">
+                    <span class="news-tag">Campus Info</span>
+                    <h3>Upgrade netwerkinfrastructuur voltooid op Site A</h3>
+                    <p>De centrale IT-afdeling heeft dit weekend de nieuwe VyOS routers succesvol in gebruik genomen.</p>
+                    <a href="#" class="read-more">Lees verder <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+
+                <div class="news-card orange-border">
+                    <span class="news-tag">Evenement</span>
+                    <h3>Gastcollege Cybersecurity door bedrijfsleven</h3>
+                    <p>Aanstaande donderdag verzorgt een security expert uit Den Haag een interactieve sessie over netwerkbeveiliging.</p>
+                    <a href="#" class="read-more">Lees verder <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="section-header">
+                <h3>Agenda</h3>
+            </div>
+
+            <div class="agenda-list">
+                <div class="agenda-item">
+                    <div class="agenda-date">
+                        <span>25</span>
+                        <small>Jun</small>
+                    </div>
+                    <div class="agenda-info">
+                        <h4>Inleverdeadline Q3</h4>
+                        <p>Lever je projecten en netwerkdocumentatie in via EduArte.</p>
+                    </div>
+                </div>
+
+                <div class="agenda-item">
+                    <div class="agenda-date">
+                        <span>02</span>
+                        <small>Jul</small>
+                    </div>
+                    <div class="agenda-info">
+                        <h4>Start Praktijkexamens</h4>
+                        <p>Locatie: Campus 3 (Technische Labs)</p>
+                    </div>
+                </div>
+
+                <div class="agenda-item">
+                    <div class="agenda-date">
+                        <span>14</span>
+                        <small>Jul</small>
+                    </div>
+                    <div class="agenda-info">
+                        <h4>Zomervakantie</h4>
+                        <p>De campus is gesloten m.u.v. netwerkbeheerders.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Vernieuwde, Lichte Footer met Zwarte Tekst -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 1.5rem;">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                    <h1>ROC <span style="color: var(--color-blue);">SilentSentinel</span></h1>
+                </div>
+                <p>Een gesimuleerde MBO-instelling gevestigd in Den Haag, gespecialiseerd in IT, netwerkbeheer en routing in een multi-site omgeving.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Snel naar</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Opleidingsaanbod</a></li>
+                    <li><a href="#">Studeren in Den Haag</a></li>
+                    <li><a href="#">Werken bij ROC SilentSentinel</a></li>
+                    <li><a href="#">Contact & Locaties</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Voor studenten</h3>
+                <ul class="footer-links">
+                    <li><a href="#">EduArte Inloggen</a></li>
+                    <li><a href="#">Roosters & Cijfers</a></li>
+                    <li><a href="#">Meldpunt IT</a></li>
+                    <li><a href="#">Studentenstatuut</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Utility balk: Lichte Achtergrond & Marges voor de links -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <div style="margin-bottom: 1rem;">
+                    Campus Den Haag | 070 - 123 45 67 | info@roc-silentsentinel.internal <br><br>
+                    &copy; 2026 ROC SilentSentinel. Gemaakt door Mirkan Yalçin.
+                </div>
+                <div class="footer-utility-links">
+                    <a href="#">Servicedesk</a>
+                    <a href="#">Webmail</a>
+                    <a href="#">Intranet</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
