@@ -105,3 +105,6 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Config/Routers
 - - CPU
 - - GPU
 - - RAM
+ 
+
+- Readme aangepast
