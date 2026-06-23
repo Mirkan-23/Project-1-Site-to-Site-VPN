@@ -1,5 +1,5 @@
 # ROC SilentSent1nel – Netwerk Infrastructuur lab
-- Versie: V3
+- Versie: V4
 
 ## Over het project
 
@@ -48,7 +48,8 @@ De locaties zijn met elkaar verbonden via een WAN-structuur met beveiligde VPN-v
 
 - Beveiligde VPN-verbindingen tussen sites
 - Dynamische routing met OSPF
-- Centrale DHCP en DNS server
+- Centrale DNS server
+- DHCP Server per locatie
 - Interne webserver (intranet simulatie)
 - Scheiding tussen student- en beheernetwerken
 
