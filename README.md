@@ -1,5 +1,5 @@
 # ROC SilentSent1nel – Netwerk Infrastructuur lab
-- Versie: V2
+- Versie: V3
 
 ## Over het project
 
@@ -51,17 +51,12 @@ De locaties zijn met elkaar verbonden via een WAN-structuur met beveiligde VPN-v
 - Centrale DHCP en DNS server
 - Interne webserver (intranet simulatie)
 - Scheiding tussen student- en beheernetwerken
-- Firewallfunctionaliteit op routers
-
----
-
-## Structuur van het project
 
 ---
 
 ## Status
 
-In ontwikkeling: ontwerp en opbouwfase
+In ontwikkeling: opbouw en testfase
 
 ---
 
