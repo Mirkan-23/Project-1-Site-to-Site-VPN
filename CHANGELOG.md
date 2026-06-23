@@ -96,12 +96,12 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Config/Routers
 - index.html aangemaakt, deze is via Gemini geproduceerd.
 - Screenfetch toegevoegd zodra je via SSH binnenkomt op de DNS, DHCP of Webserver. Te zien:
 - username & hostname
- - OS
- - Kernel
- - Uptime
- - Pakketten
- - Shell
- - Schijfruimte
- - CPU
- - GPU
- - RAM
+- - OS
+- - Kernel
+- - Uptime
+- - Pakketten
+- - Shell
+- - Schijfruimte
+- - CPU
+- - GPU
+- - RAM
