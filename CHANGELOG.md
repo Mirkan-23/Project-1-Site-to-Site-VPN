@@ -85,3 +85,12 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Config/Routers
 -- ROC-DNS
 
 - Poging tot DHCP-Relay issue's debuggen (Deels DHCP Relay kunnen fixen)
+
+23-2-2026:
+
+- Kopje "Structuur van het project" verwijderd van de readme, hiervoor is de netwerktekening gewoon beschikbaar, i.c.m. de casus.
+- Status gewijzigd naar: opbouw en testfase
+- Firewall-functionaliteit definitief buiten scope geplaatst om de focus volledig te leggen op een stabiele routing en VPN infrastructuur
+- Debian 13 minimal instance geïnstalleerd om HTTP services aan te bieden d.m.v. Nginx.
+-- ROC-WEB
+- index.html aangemaakt, deze is via Gemini geproduceerd.
