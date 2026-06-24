@@ -106,5 +106,10 @@ https://github.com/Mirkan-23/Project-1-Site-to-Site-VPN/tree/main/Config/Routers
 - - GPU
 - - RAM
  
+ 
+24-6-2026:
 
 - Readme aangepast
+- Lokale DHCP Server geplaatst op Site-B en Site-C, DHCP-relay wordt niet via VPN gedaan, enkel op site locatie. Dit houdt dus in dat alle 3 de locatie's nu een DHCP Server bevatten.
+- VPN Configuratie herzien en gewijzigd
+- De topologie is nu omgezet naar een hub-and-spoke topologie waarbij Site-B en Site-C niet direct met elkaar praten, maar via Site-A naar elkaar toe gaan
