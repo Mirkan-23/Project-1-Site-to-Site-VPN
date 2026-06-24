@@ -18,21 +18,7 @@ De omgeving bestaat uit de volgende locaties:
 - Site C – Campus 3 (technische labs en studentenomgeving)
 - ISP – Onbetrouwbaar internet (simulatie)
 
-Locatie A is verbonden met locatie B en C, locatie B is NIET met locatie C verbonden, enkel locatie A is met B en C verbonden, een soort onderbroken driehoek dus:
-            +-----------+
-            |  Site-A   |
-            |   HUB     |
-            +-----------+
-             /         \
-            /           \
-   IPsec/VTI           IPsec/VTI
-          /               \
- +-----------+       +-----------+
- |  Site-B   |       |  Site-C   |
- +-----------+       +-----------+
-
-   (Geen directe verbinding tussen B en C dus. B <-> C)
-
+Locatie A is verbonden met locatie B en C, locatie B is NIET met locatie C verbonden, enkel locatie A is met B en C verbonden, een soort onderbroken driehoek dus.
 ---
 
 ## Gebruikte technologieën
