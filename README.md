@@ -1,5 +1,5 @@
 # ROC SilentSent1nel – Netwerk Infrastructuur lab
-- Versie: V4
+- Versie: V5
 
 ## Over het project
 
@@ -18,7 +18,20 @@ De omgeving bestaat uit de volgende locaties:
 - Site C – Campus 3 (technische labs en studentenomgeving)
 - ISP – Onbetrouwbaar internet (simulatie)
 
-De locaties zijn met elkaar verbonden via een WAN-structuur met beveiligde VPN-verbindingen.
+Locatie A is verbonden met locatie B en C, locatie B is NIET met locatie C verbonden, enkel locatie A is met B en C verbonden, een soort onderbroken driehoek dus:
+            +-----------+
+            |  Site-A   |
+            |   HUB     |
+            +-----------+
+             /         \
+            /           \
+   IPsec/VTI           IPsec/VTI
+          /               \
+ +-----------+       +-----------+
+ |  Site-B   |       |  Site-C   |
+ +-----------+       +-----------+
+
+   (Geen directe verbinding tussen B en C dus. B <-> C)
 
 ---
 
@@ -26,8 +39,8 @@ De locaties zijn met elkaar verbonden via een WAN-structuur met beveiligde VPN-v
 
 - 3x VyOS (routing, VPN en firewallfunctionaliteit)
 - 1x VyOS (Untrusted internet)
-- Debian Minimal DHCP-Server 
-- Debian Minimal DNS-Server 
+- Debian Minimal DHCP-Server (3x, elke locatie 1 dhcp server)
+- Debian Minimal DNS-Server
 - Debian Minimal Webserver
 - OSPF (dynamisch routingprotocol)
 - Site-to-Site VPN
@@ -57,7 +70,7 @@ De locaties zijn met elkaar verbonden via een WAN-structuur met beveiligde VPN-v
 
 ## Status
 
-In ontwikkeling: opbouw en testfase
+In ontwikkeling: afrondingsfase
 
 ---
 
